@@ -22,12 +22,12 @@ class BSTNode:
     def contains(self, target):
         if target is self.value:
             return True
-        if target < self.value:
+        elif target < self.value:
             if self.left:
                 return self.left.contains(target)
             else:
                 return False
-        if target > self.value:
+        elif target >= self.value:
             if self.right:
                 return self.right.contains(target)
             else:

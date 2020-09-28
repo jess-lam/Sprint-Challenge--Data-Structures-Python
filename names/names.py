@@ -22,6 +22,7 @@ for name_1 in names_1:
 """
 
 
+
 bst = BSTNode("value")
 
 for name_1 in names_1:
@@ -30,7 +31,7 @@ for name_1 in names_1:
 for name_2 in names_2:
     if name_2 not in duplicates:
         if bst.contains(name_2):
-            duplicates.append(name_2)
+            print(name_2)
 
 
 end_time = time.time()
