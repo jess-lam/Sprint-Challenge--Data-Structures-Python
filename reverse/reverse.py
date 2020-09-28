@@ -43,10 +43,11 @@ class LinkedList:
             return None
         else:
             curr = node
-            prev = None
+            prev = prev
             while curr is not None:
                 next_node = curr.get_next()
+                curr.set_next(prev)
                 prev = curr
                 curr = next_node
-                self.head = prev
+            self.head = prev
 
