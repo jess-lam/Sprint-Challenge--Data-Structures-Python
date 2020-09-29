@@ -9,25 +9,29 @@ class BSTNode:
         if value < self.value:
             if self.left is None:
                 self.left = BSTNode(value)
+                return self.left.value
             else:
                 self.left.insert(value)
         if value >= self.value:
             if self.right is None:
                 self.right = BSTNode(value)
+                return self.right.value
             else:
                 self.right.insert(value)
 
     # Return True if the tree contains the value
     # False if it does not
     def contains(self, target):
-        if target is self.value:
+        if self.value is None:
+            return None
+        if target == self.value:
             return True
-        elif target < self.value:
+        if target < self.value:
             if self.left:
                 return self.left.contains(target)
             else:
                 return False
-        elif target >= self.value:
+        if target >= self.value:
             if self.right:
                 return self.right.contains(target)
             else:
